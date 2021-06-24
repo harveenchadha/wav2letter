@@ -50,9 +50,9 @@ class CMakeBuild(build_ext):
     def build_extensions(self):
         extdir = os.path.abspath("wav2letter")
         sourcedir = os.path.abspath("../..")
-        use_cuda = "OFF" if check_negative_env_flag("USE_CUDA") else "ON"
-        use_kenlm = "OFF" if check_negative_env_flag("USE_KENLM") else "ON"
-        use_mkl = "ON" if check_env_flag("USE_MKL") else "OFF"
+        use_cuda = "OFF" 
+        use_kenlm = "OFF" 
+        use_mkl = "OFF" 
         cmake_args = [
             "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=" + extdir,
             "-DPYTHON_EXECUTABLE=" + sys.executable,
