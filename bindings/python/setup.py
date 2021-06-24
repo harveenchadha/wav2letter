@@ -51,7 +51,7 @@ class CMakeBuild(build_ext):
         extdir = os.path.abspath("wav2letter")
         sourcedir = os.path.abspath("../..")
         use_cuda = "OFF" 
-        use_kenlm = "OFF" 
+        use_kenlm = "ON" 
         use_mkl = "OFF" 
         cmake_args = [
             "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=" + extdir,
