@@ -53,6 +53,7 @@ class CMakeBuild(build_ext):
         use_cuda = "OFF" 
         use_kenlm = "ON" 
         use_mkl = "OFF" 
+        kenlm = "/opt/conda/envs/fairseq2/lib/python3.7/site-packages/kenlm-0.0.0.dist-info"
         cmake_args = [
             "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=" + extdir,
             "-DPYTHON_EXECUTABLE=" + sys.executable,
@@ -61,6 +62,7 @@ class CMakeBuild(build_ext):
             "-DW2L_LIBRARIES_USE_CUDA=" + use_cuda,
             "-DW2L_LIBRARIES_USE_KENLM=" + use_kenlm,
             "-DW2L_LIBRARIES_USE_MKL=" + use_mkl,
+            "-DKENLM_LIB="+ kenlm,
         ]
 
         cfg = "Debug" if self.debug else "Release"
