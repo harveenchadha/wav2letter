@@ -64,9 +64,8 @@ class CMakeBuild(build_ext):
             "-DW2L_LIBRARIES_USE_MKL=" + use_mkl,
             "-DKENLM_LIB="+ kenlm,
             "-DCMAKE_INCLUDE_PATH="+ kenlm,
-            "-DKENLM_LIB="+ kenlm,
             "-DKENLM_UTIL_LIB="+ kenlm,
-            "-DKENLM_INC="+ kenlm"
+            "-DKENLM_INC="+ kenlm,
         ]
 
         cfg = "Debug" if self.debug else "Release"
